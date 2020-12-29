@@ -1,0 +1,189 @@
+:root {
+    --timber-green: hsl(165, 45%, 55%);
+    --timber-orange: #FBBF97;
+    --timber-lightblue: #87D3EA;
+    --timber-grey: #E2E4DF;
+    --timber-black: #0F0F0F;
+    --crema-brown: #9C5333;
+  }
+
+  @font-face {
+      font-family: 'Recoleta-Light';
+      src: url('fonts/Recoleta-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Recoleta-Regular';
+    src: url('fonts/Recoleta-Regular.ttf') format('truetype');
+}
+
+  @font-face {
+      font-family: 'Recoleta-Medium';
+      src: url('fonts/Recoleta-Medium.ttf') format('truetype');
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+      font-family: Recoleta-Light, Nanum Myeongjo, serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: var(--timber-black);
+      margin: 0;
+  }
+  
+  /* Putting the background image behind the form and filling the entire page */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--timber-grey);
+    background-image: linear-gradient(35deg, var(--timber-lightblue), var(--timber-orange));
+  }
+  
+  h1 {
+    font-family: Recoleta-Medium, Nanum Myeongjo, serif;
+    font-weight: 800;
+    font-size: 325%;
+    color: var(--timber-grey);
+    line-height: 1.2;
+  }
+  
+  p {
+    font-family: Recoleta-Light, Nanum Myeongjo, serif;
+    font-weight: 400;
+    color: var(--timber-black);
+    font-size: 1.125rem;
+  }
+  
+  h1, p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  label {
+      display: flex;
+      align-items: center;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+  }
+
+  button {
+      border: none;
+  }
+  
+  .container {
+      width: 100%;
+      margin: 3.125rem auto 0 auto;
+  }
+
+  @media (min-width: 576px) {
+      .container {
+          max-width: 540px;
+        }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+      }
+}
+
+  .header {
+    padding: 0 0.625rem;
+    margin-bottom: 2rem;
+  }
+
+  .clue {
+      margin-left: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--timber-black);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  /* Form */
+
+  form {
+      background: var(--timber-grey);
+      padding: 2rem 0.625rem;
+      border-radius: 0.25rem;
+  }
+
+  @media (min-width: 480px) {
+      form {
+          padding: 2.5rem;
+      }
+  }
+
+  /* Styling each of the divs containing the form components */
+  .form-group {
+      margin: 0 auto 1.25rem auto;
+      padding: 0.25rem;
+  }
+
+  /* Styling the textboxes */
+  .form-control {
+      display: block;
+      width: 100%;
+      height: 2.375rem;
+      padding: 0.375rem 0.75rem;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid var(--timber-grey);
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form-control:focus {
+      border-color: var(--timber-lightblue);
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  .input-radio,
+  .input-checkbox {
+      display: inline-block;
+      margin-right: 0.625rem;
+      min-height: 1.25rem;
+      min-width: 1.25rem;
+  }
+
+  .input-textarea {
+      min-height: 120px;
+      width: 100%;
+      padding: 0.625rem;
+      resize: vertical;
+  }
+
+  .submit-button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--timber-orange);
+      color: inherit;
+      border-radius: 2px;
+      cursor: pointer;
+  }

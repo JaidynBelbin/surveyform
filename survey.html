@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Backup font for Recoleta -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TimberSurveyForm</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+        </style>
+    </head>
+    <body>
+        <!-- The main container for the form -->
+        <div class="container">
+            <header class="header">
+            <h1 id="title" class="text-center">Timber Caf&eacute Survey</h1>
+            <p id="description" class="description text-center">Thank you for helping us improve our products and service.</p>
+            </header>
+
+            <form id="survey-form">
+
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input 
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="form-control"
+                        placeholder="Enter your name"
+                        required/>
+                </div>
+
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input 
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Enter your email"
+                        required/>
+                </div>
+
+                <div class="form-group">
+                    <label id="number-label" for="number">
+                        Age<span class="clue">(optional)</span></label>
+                    <input 
+                        type="number" 
+                        name="age"
+                        id="number"
+                        min="10"
+                        max="99"
+                        class="form-control"
+                        placeholder="Age" />
+                </div>
+                
+                <div class="form-group">
+                    <p>How often do you visit Timber Caf&eacute per week?</p>
+                    <label><input
+                        name="frequency"
+                        value="1-2"
+                        type="radio"
+                        class="input-radio"
+                        checked/>Once or twice
+                    </label>
+                    <label><input
+                        name="frequency"
+                        value="3-5"
+                        type="radio"
+                        class="input-radio"/>Three to five times
+                    </label>
+                    <label><input
+                        name="frequency"
+                        value="everyday"
+                        type="radio"
+                        class="input-radio"/>Every day!
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <p>Did you try our monthly French Toast special?</p>
+                    <label><input
+                        name="frenchtoastconfirm"
+                        value="yes"
+                        type="radio"
+                        class="input-radio"
+                        checked/>Yes
+                    </label>
+                    <label><input
+                        name="frenchtoastconfirm"
+                        value="no"
+                        type="radio"
+                        class="input-radio"/>No
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <p>If so, which flavour was your favourite?</p>
+                    <select id="dropdown" name="favourite" class="form-control">
+                        <option disabled selected value>Select flavour</option>
+                        <option value="applecrumble">Apple Crumble</option>
+                        <option value="ferrero">Ferrero Rocher</option>
+                        <option value="strawberry">Strawberry Shortcake</option>
+                        <option value="lemon">Lemon Merengue</option>
+                        <option value="cherryripe">Cherry Ripe</option>
+                        <option value="stickydate">Sticky Date Pudding</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>Have you tried one of our teas?</p>
+                    <label><input
+                        name="teaconfirm"
+                        value="yes"
+                        type="radio"
+                        class="input-radio"
+                        checked/>Yes
+                    </label>
+                    <label><input
+                        name="teaconfirm"
+                        value="no"
+                        type="radio"
+                        class="input-radio"/>No
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <p>If so, which kind was your favourite?</p>
+                    <select id="dropdown" name="favourite" class="form-control">
+                        <option disabled selected value>Select tea</option>
+                        <option value="herbgarden">Herb Garden</option>
+                        <option value="green">Gorgeous Green</option>
+                        <option value="jasmine">Jasmine Pearl</option>
+                        <option value="breakfast">Ruby Breakfast</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>What would you like to see improved?
+                        <span class="clue">(Check all that apply)</span>
+                    </p>
+
+                    <label>
+                        <input
+                        name="wish"
+                        value="foodselection"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />Food Selection
+                    </label>
+                    <label>
+                        <input
+                        name="wish"
+                        value="seating"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />More Seating
+                    </label>
+                    <label>
+                        <input
+                        name="wish"
+                        value="decor"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />Different Decor
+                    </label>
+                    <label>
+                        <input
+                        name="wish"
+                        value="ambience"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />Different Ambience (cosier, brighter?)
+                    </label>
+                    <label>
+                        <input
+                        name="wish"
+                        value="cabinet"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />More ready-to-go items
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <p>Any other comments or suggestions?</p>
+                    <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Enter your comment here!">
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
